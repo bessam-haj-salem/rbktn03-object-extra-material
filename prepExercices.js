@@ -113,12 +113,26 @@ var glasses = {
 //  Add the object representing yourself (person) to this array of people (if your name key does not have the same 'shape' as the ones above,
 //  change it to look like these).
 //
-objectMe = 
+var objectMe = {
+	name: {
+		first: 'Bessam', 
+		last: 'Haj Salem'},
+	age: 38	
+};
 
+people.push(objectMe);
 
   
 //  Write a function that, when passed people as an argument, returns an array of their full names. Can you use your formatName function 
   //here?
+  function fullName(array){
+  	var array1 = [];
+  	for( var i = 0; i < array.length ; i++){
+  		result = array1push(array[i].name.first,array[i].name.last);
+
+  	}
+  	return result;
+  }
 //  Write a function that finds the average age of the people array.
 //  Write a function that, when given people and an age as arguments, returns an array of just the people that are older than the specified
 //age.
