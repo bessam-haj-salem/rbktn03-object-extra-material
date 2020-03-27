@@ -197,14 +197,31 @@ function  removeOddValues(obj){
 
 // 1.Write a function countWords that, when given a string as an argument, returns an object where keys are the words in the string, 
 //and values are the number of occurrences of that word within the string:
-   function countWords(s) {
+function countWords(s) {
+	var arr0 = s.split(' ');
+	var element1 = arr0[0];
+	var arr1 = [];
+	var arr2 = [];
+	var j = 0;
+   	for (var i = 0; i < arr0.length; i++ ){
+   		if(element1 === arr0[i] && j < arr0.length){
+   			element1 =  arr1.push(arr0[i]);
+   			j++;
+   			arr2.push([element1[i],j]);
+     	}
+   		
+    }
+    
+    return Object.fromEntries(arr2);
+}   
 //  }
 //  countWords('hello hello');      // => {'hello': 2}
 //  countWords('Hello hello');      // => {'Hello': 1, 'hello': 1}
 //  countWords('The quick brown');  // => {'The': 1, 'quick': 1, 'brown': 1}
 //  HINT: You will want to make use of the string method split.
 //        Try 'Hello hello'.split(' ') at a console to see how it works.
-//        Modify countWords to be case insensitive by using the following string method (experiment at a console with it to learn its behavior):
+//        Modify countWords to be case insensitive by using the following string method (experiment at a console with it to learn its 
+// behavior):
 //        'HElLo'.toLowerCase(); // => ???
 
 // 2.Write a function countCharacters that, when given a string as an argument, returns an object containing counts of the occurrences of each character in the string.
