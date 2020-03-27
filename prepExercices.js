@@ -49,24 +49,32 @@ delete objectMe["hometown"];
 delete objectMe["Date of Birth"];
 delete objectMe["Movies"];
 delete objectMe["Sports"];
-objectMe.Name = 
+objectMe.Name = {
+	firstName : 'Bessam',
+	lastName  : 'Haj Salem'
+};
 // 5.Look up something you want to buy on souq.com, and make an object that represents information about the item:
-//  Item Name
-//  Category/Type
-//  Year released
-//  Rating
-//  Price
-
+var glasses = {
+    Item Name     : "Ray ban",
+    Category/Type : "Sunglasses",
+    Year released : "2020",
+    Rating        : "4.5/5",
+    Price         : "400$"
+};
 // 6.in the console,Create a new empty object in your console called obj like this:
-// var obj = {};
+  var obj = {};
 
 // 7.Add a new key/value pair to the object obj by assigning a new value to a new key like so:
 //  obj.hello = 'world';
 //  obj['number'] = 25;
 
+
 // 8. Now, check the value of obj in the console and ensure that it has the two key/value pairs added above. This is how we create new key/value pairs in existing objects.
 
 // 9.In the console attached to your main.js file, add a favoriteColor key/value pair to the object that represents you.
+ 
+ object.me["favoriteColor"] = "yellow";
+ 
 
 // 10.Fix the attempts to access values in the person object:
 //  var key = 'name';
@@ -77,25 +85,43 @@ objectMe.Name =
 //  };
 //  woman[age]; // => 85
 //  woman.key; // => 'Grace Hopper'
-//  woman['computer scientist'] // => ???
+    woman['occupation'] // => 'computer scientist'
 //  Side Note: Who is Grace Hopper? She is one of the most influential people in the history of computer science and software engineering.
 //  Read more about her contribution to our field here. (https://en.wikipedia.org/wiki/Grace_Hopper)
 
-// 11.Write a function formatName that takes the person object that you created above (the first exercise at the top) as an argument, and returns your full name.
+// 11.Write a function formatName that takes the person object that you created above (the first exercise at the top) as an argument, 
+//and returns your full name.
+ var objectMe = {
 
+	firstName : 'Bessam',
+	lastName  : 'Haj Salem',
+	age       : '38',
+	hometown  : 'Grombalia'
+};
+ 
+ function formatName(obj){
+ 	return obj.firstName + ' ' + obj.lastName;
+ }
 // 12.Using these objects:
-//  var people = [
+  var people = [
 //        {name: {first: 'Grace', middle: 'B.', last: 'Hopper'}, age: 85},
 //        {name: {first: 'Adele', last: 'Goldstine'}, age: 43},
 //        {name: {first: 'Ada', last: 'Lovelace'}, age: 36},
 //        {name: {first: 'Hedy', middle: 'E.', last: 'Lamarr'}, age: 85},
 //        {name: {first: 'Ruchi', last: 'Sanghvi'}, age: 34}
-//  ];
+   ];
 //  Add the object representing yourself (person) to this array of people (if your name key does not have the same 'shape' as the ones above,
 //  change it to look like these).
-//  Write a function that, when passed people as an argument, returns an array of their full names. Can you use your formatName function here?
+//
+objectMe = 
+
+
+  
+//  Write a function that, when passed people as an argument, returns an array of their full names. Can you use your formatName function 
+  //here?
 //  Write a function that finds the average age of the people array.
-//  Write a function that, when given people and an age as arguments, returns an array of just the people that are older than the specified age.
+//  Write a function that, when given people and an age as arguments, returns an array of just the people that are older than the specified
+//age.
 //  Side Note: The women in the people array are all very famous. What did they do?
 //  Bonus Points: What is the name of the woman in the picture here?
 
