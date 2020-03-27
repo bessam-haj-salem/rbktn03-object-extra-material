@@ -124,18 +124,35 @@ people.push(objectMe);
 
   
 //  Write a function that, when passed people as an argument, returns an array of their full names. Can you use your formatName function 
-  //here?
-  function fullName(array){
+  //here? 
+function fullName(array){ // we can't use formatName function because in our case we have an array as argument not object
   	var array1 = [];
+  	var result = [];
   	for( var i = 0; i < array.length ; i++){
-  		result = array1push(array[i].name.first,array[i].name.last);
+  	   array1.push(array[i].name.first, array[i].name.last);
 
   	}
-  	return result;
+  	return array1;
   }
 //  Write a function that finds the average age of the people array.
+function averageAge(array){
+	var result = 0;
+	for(var i = 0; i < array.length; i++){
+		result = result + array[i].age;
+	}
+	return result / array.length;
+}
 //  Write a function that, when given people and an age as arguments, returns an array of just the people that are older than the specified
 //age.
+function older(array, ages){
+	var array1 = [];
+	for(var i = 0; i < array.length; i++){
+		if( array[i].age > ages){
+		array1.push(array[i]);
+		}
+	}
+	return array1;
+}
 //  Side Note: The women in the people array are all very famous. What did they do?
 //  Bonus Points: What is the name of the woman in the picture here?
 
@@ -147,19 +164,40 @@ people.push(objectMe);
 //        _byz: 939205,
 //        _ttrs: 510852
 //  }
-//  function clean(obj) {
-//  }
+function clean(obj) {
+	delete dirtyObject["_fht"];
+	delete dirtyObject["_byz"];
+	delete dirtyObject["_ttrs"];
+	return dirtyObject;
+}
 //  clean(dirtyObject); // => {name: 'Yan Fan', age: 27}
-//  The function clean should accept an object as the argument and return a new object that has all of the key/value pairs of its parameter except for those that begin with _.
+//  The function clean should accept an object as the argument and return a new object that has all of the key/value pairs of its parameter
+// except for those that begin with _.
 
-// 14.Write a function removeOddValues that takes an object as an argument and returns an object with all key/value pairs removed for which the value holds an odd number. You'll need to use the `typeof` operator to first check that the values are numbers. Try the below in your console:
+// 14.Write a function removeOddValues that takes an object as an argument and returns an object with all key/value pairs removed for which 
+//the value holds an odd number. You'll need to use the `typeof` operator to first check that the values are numbers. Try the below in your 
+//console:
 //  typeof 'Hello'
 //  typeof 3
+function  removeOddValues(obj){
+	var arr0 = Object.entries(obj);
+	var arr1=[];
+	for( var i = 0; i < arr0.length; i++){
+		
+		if( arr0[i][1] % 2 !== 0){
+			arr1.push(arr0[i]);
+
+		}
+	}
+	
+	return  Object.fromEntries(arr1);
+}
 
 // More Practice
 
-// 1.Write a function countWords that, when given a string as an argument, returns an object where keys are the words in the string, and values are the number of occurrences of that word within the string:
-//  function countWords(s) {
+// 1.Write a function countWords that, when given a string as an argument, returns an object where keys are the words in the string, 
+//and values are the number of occurrences of that word within the string:
+   function countWords(s) {
 //  }
 //  countWords('hello hello');      // => {'hello': 2}
 //  countWords('Hello hello');      // => {'Hello': 1, 'hello': 1}
