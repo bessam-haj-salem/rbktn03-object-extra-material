@@ -1,26 +1,55 @@
 // Exercises
 // Basic Requirments
 // 1.Fix the syntax & style issues with the three objects below:
-//  {firstName 'Yan', lastname: 'Fan' }
-//  {a: 1, b:2 c: 3 d 4}
-//  {
-//        animal: 'dog'
-//        noise: 'bark',
-//        age: 3,
-//        type 'Golden Retriever'
-//        color: 'Yellow',
-//  }
+    {
+	 firstName : 'Yan',
+	 lastname  : 'Fan'
+	}
 
-// 2. Create an object that represents you. It should contain your first name, last name, age and hometown. Assign it to a variable called person.
+    {
+	 a : 1,
+	 b : 2,
+	 c : 3,
+	 d : 4
+	}
+
+    {
+     animal : 'dog',
+     noise  : 'bark',
+     age    : 3,
+     type   : 'Golden Retriever',
+     color  : 'Yellow'
+    }
+
+// 2. Create an object that represents you. It should contain your first name, last name, age and hometown. Assign it to a variable 
+//called person.
+var objectMe = {
+
+	firstName : 'Bessam',
+	lastName  : 'Haj Salem',
+	age       : '38',
+	hometown  : 'Grombalia'
+};
 
 // 3.Add three more key/value pairs to your object that represent other attributes of yourself. Ideas include (but are not limited to):
 //  Favorite TV Shows/Movies/Sports/Activities etc.
 //  Family
 //  Date of Birth
 //  Place of Birth
+objectMe["Date of Birth"] = "22-04-81";
+objectMe.Movies = "the godfather";
+objectMe.Sports = "basket-ball";
 
-// 4.Change your object to have a single name key, the value of which is an object – this object should have first, last and middle keys containing your first, last, and middle names respectively.
-
+// 4.Change your object to have a single name key, the value of which is an object – this object should have first, last and middle keys
+// containing your first, last, and middle names respectively.
+delete objectMe["firstName"];
+delete objectMe["lastName"];
+delete objectMe["age"];
+delete objectMe["hometown"];
+delete objectMe["Date of Birth"];
+delete objectMe["Movies"];
+delete objectMe["Sports"];
+objectMe.Name = 
 // 5.Look up something you want to buy on souq.com, and make an object that represents information about the item:
 //  Item Name
 //  Category/Type
